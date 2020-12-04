@@ -1,0 +1,59 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <ul class="nav">
+    <li class="nav-item ">
+    <a class="nav-link" routerLink="home">ASSET MANAGEMENT SYSTEM</a>
+  </li>
+  <li class="nav-item ">
+    <a class="nav-link" routerLink="home">HOME</a>
+  </li>
+   <!-- <li class="nav-item ">
+    <a class="nav-link" routerLink="signup" *ngIf="!isCustomerLoggedIn() && !isAdminLoggedIn()">Sign Up</a>
+  </li> -->
+  <li class="nav-item ">
+    <a class="nav-link" routerLink="userprofile" *ngIf="isCustomerLoggedIn()">User Profile</a>
+  </li>
+   <li class="nav-item ">
+    <a class="nav-link" routerLink="currentassets" *ngIf="isAdminLoggedIn() ">Current Assets</a>
+  </li>
+   <li class="nav-item ">
+    <a class="nav-link" routerLink="addnewassets" *ngIf="isAdminLoggedIn() ">Add New Assets</a>
+  </li>
+  <!-- <li class="nav-item " class="a">
+    <a class="nav-link" routerLink="login" *ngIf="!isCustomerLoggedIn() && !isAdminLoggedIn()">Login</a>
+  </li> -->
+  <li class="nav-item ">
+    <a class="nav-link" routerLink="generatereport" *ngIf="isAdminLoggedIn()">Generate Report</a>
+  </li>
+   <li class="nav-item ">
+    <a class="nav-link" routerLink="userassets" *ngIf="isCustomerLoggedIn()">Assets</a>
+  </li>
+<!-- <button type="submit" class="btn btn-outline-primary mb-2 ml-2" (click)="userLogout()" *ngIf="isCustomerLoggedIn()">User Logout</button>
+   <button type="submit" class="btn btn-outline-primary mb-2 ml-2" (click)="adminLogout()" *ngIf="isAdminLoggedIn()">Admin Logout</button> -->
+
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+   <div class="dropdown ml-3">
+    <button class="btn btn-outline-primary dropdown-toggle button-right" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      PROFILE
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item active" type="button" routerLink="/signup" *ngIf="!isCustomerLoggedIn() && !isAdminLoggedIn()">SIGNUP</button>
+      <button class="dropdown-item" type="button" routerLink="/login" *ngIf="!isCustomerLoggedIn() && !isAdminLoggedIn()">LOGIN</button>
+      <button class="dropdown-item btn btn-outline-primary mb-2 ml-2" type="submit" (click)="userLogout()" *ngIf="isCustomerLoggedIn()">LOGOUT</button>
+      <button class="dropdown-item btn btn-outline-primary mb-2 ml-2" type="submit" (click)="adminLogout()" *ngIf="isAdminLoggedIn()">LOGOUT</button>
+      <div class="dropdown-divider"></div>
+      <button class="dropdown-item" type="button">SETTINGS</button>
+    </div>
+  </div>
+
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+
+

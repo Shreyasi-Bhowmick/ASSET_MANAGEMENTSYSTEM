@@ -1,0 +1,22 @@
+<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 720px;">
+<h2 class="col-md-6 text-center offset-md-4">User Profile</h2>
+<div class="col-md-6 offset-md-4" *ngIf="users">
+  {{id.id}}
+<table class="table table-hover table-primary table-bordered">
+  <tr class="text-center">
+    <th>First Name </th>
+    <th>Last Name </th>
+    <th>Email </th>
+    <th>Total Assets </th>
+  </tr>
+  <tr class="text-center">
+ <td>{{users.fname}}</td>
+ <td>{{users.lname}}</td>
+ <td>{{users.email}}</td>
+ <td>{{id.id}}</td>
+  </tr>
+</table>
+
+<button class="btn btn-outline-primary" (click)="update()">Update</button>
+</div>
+</div>

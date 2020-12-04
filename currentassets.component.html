@@ -1,0 +1,28 @@
+<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 720px;">
+  <h3 class="col-md-4 offset-md-3">Current Assets</h3>  
+  <div class="col-md-4 offset-md-3 mt-4">
+      <table class="table table-hover table-primary table-bordered">
+        <tr class="text-center" >
+        <th>Id</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th>Price</th>
+           <th>TotalPrice</th>
+            <th>Details</th>
+            <th colspan="2" class="text-align:center;">Request </th>
+        </tr>
+        <tr class="text-center" *ngFor="let asset of assets1">
+        <td>{{asset.id}}</td>
+       <td>{{asset.title}} </td>
+          <td>{{asset.category}}</td>
+          <td>{{asset.quantity}} </td>
+          <td>{{asset.price}}</td>
+           <td>{{asset.quantity*asset.price}}</td>
+            <td>{{asset.additionaldetails}}</td>
+            <td><button class="btn btn-outline-primary" (click)="accepted(asset.category,asset.quantity,asset.quantity*asset.price)">Accepted</button></td>
+      <td><button class="btn btn-outline-danger" (click)="rejected(asset.id)">Rejected</button></td>
+        </tr>
+      </table> 
+    </div>
+    </div>

@@ -1,0 +1,21 @@
+<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 720px;">
+<h2 class="col-md-4 offset-md-4">Final Report</h2>
+<div class="col-md-6 offset-md-4 mt-4">
+  <table class="table table-hover table-primary table-bordered">
+    <tr class="text-center">
+      <th>Id</th>
+      <th>Category</th>
+      <th>Quantity</th>
+      <th>Price </th>
+    </tr>
+    <tr class="text-center" *ngFor="let report of reports">
+      <td>{{report.id}}</td>
+     <td>{{report.category}}</td>
+     <td>{{report.quantity}}</td>
+     <td>{{report.totalprice}}</td>
+      </tr>
+  </table>
+  </div>
+  <button class="btn btn-outline-primary offset-md-4" (click)="totalAsset()">Total Assets</button> = {{value}}
+<button class="btn btn-outline-primary"(click)="totalWorth()">Total Assets Worth </button>={{sum}}
+</div>

@@ -1,0 +1,22 @@
+<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 720px;">
+<h3 class="offset-md-4 col-md-4">Please Login!</h3>
+<div class="card offset-md-4 col-md-3 mt-4">
+  <div class="card-body">
+<form [formGroup]="loginForm">
+  <div class="form-group mt-3">
+  <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" formControlName="email" #email>
+    <div style="color:red;" *ngIf="loginForm.get('email').dirty && loginForm.get('email').touched && loginForm.get('email').value.length<5">email should be more than 6 character</div>
+    
+    </div>
+    <div class="form-group mt-3">
+    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" formControlName="password" #password>
+      <div style="color:red;" *ngIf="loginForm.get('password').dirty && loginForm.get('password').touched && loginForm.get('password').value.length<5">password should be more than 6 character</div>
+  
+  </div>
+
+  <button type="submit" class="btn btn-outline-primary mb-2" (click)="login(email.value,password.value)">Login</button>
+    <button type="submit" class="btn btn-outline-primary mb-2 ml-2" (click)="register()">Register</button>
+</form>
+</div>
+</div>
+</div>
